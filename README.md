@@ -19,7 +19,7 @@ This will create 3 containers:
  - rsyslog_log_agent_1
  - rsyslog_log_server_1  
 
-Static web content (`./nginx/html/`) is available on port 80, logs from web are forwarded to log_agent on port 515, and then forwarded to log_server on port 514. Nginx logs are available on host machine under `./log_server/nginx/nginx.log`.  
+Static web content (`./nginx/html/`) is available on port 80, logs from web are forwarded by [nginx.conf configuration](rsyslog/nginx/conf/nginx.conf#L22-L24) to log_agent on port 515, and then forwarded to log_server on port 514. Nginx logs are available on host machine under `./log_server/nginx/nginx.log`.  
 
 Logs are sent with `local0` facility and only `local0` logs are forwarded by log_agent to log_server.
   
